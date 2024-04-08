@@ -27,6 +27,12 @@ El alumno deberá:
 - El modelado de las clases lo decidirá el alumno, es decir, el alumno decidirá los atributos que debe llevar una clase. Se recomienda seguir un enfoque lo más realista posible.
 - Se deberá realizar todos los test posibles.
 
+## Gestión de Tickets
+En el ámbito del desarrollo de software, un ticket o una issue, es información que requiere una implementación.  
+Para realizar una implementación debemos previamente crear un ticket. Se tiene que añadir esta información:
+- Título de lo que se desea desarrollar.
+- Descripción de lo que se desea desarrollar.
+
 ## Controlador de Versiones
 
 ## Gestión de ramas
