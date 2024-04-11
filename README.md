@@ -56,7 +56,7 @@ chore/122/renombrado_clases_ebooks
 
 ## Gestión de commits
 Se van a distinguir los siguientes tipos de commits:
-- feate: se añade una nueva funcionalidad.
+- feat: se añade una nueva funcionalidad.
 - fix: se soluciona un problema.
 - chore: para tareas de mantenimiento, renombrado, etc.
 - test: para añadir nuevos test.
