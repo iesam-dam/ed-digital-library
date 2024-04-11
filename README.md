@@ -64,7 +64,7 @@ Se van a distinguir los siguientes tipos de commits:
 Por cada funcionalidad implementada se deberá hacer un commit que seguirá esta estructura:  
  
 tipo: título
-(espacio)
+(espacio)  
 Descripción  
 
 Ejemplo:
