@@ -1,4 +1,5 @@
 package com.iesam.digitallibrary.features.user.data;
+import com.iesam.digitallibrary.features.user.data.local.UserFileLocalDataSource;
 import com.iesam.digitallibrary.features.user.domain.User;
 import com.iesam.digitallibrary.features.user.domain.UserRepository;
 
@@ -8,8 +9,8 @@ import java.util.Map;
 
 public class UserDataRepository implements UserRepository{
 
-
-    public final Map<String, User> customerMap = new HashMap<>();
+    public UserFileLocalDataSource userFileLocalDataSource = new UserFileLocalDataSource();
+    public final Map<String, User> userMap = new HashMap<>();
     public final ArrayList<User> users = new ArrayList<>();
     public static UserRepository instance=null;
     public static UserDataRepository newInstance(){
@@ -21,6 +22,6 @@ public class UserDataRepository implements UserRepository{
 
     @Override
     public void save(User user) {
-        users.add(user);
+        userFileLocalDataSource.save(user);
     }
 }
