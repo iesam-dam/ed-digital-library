@@ -10,21 +10,24 @@ public class Main {
         int option;
        do {
            System.out.println("MENÚ PRINCIPAL");
-
-        System.out.println("1. Registrar usuario");
+           System.out.println("0. Salir");
+           System.out.println("1. Registrar usuario");
 
         option = scanner.nextInt();
         switch (option) {
+            case 0:
+                System.out.println("Saliendo del programa");
+                break;
             case 1:
                 System.out.println("Introduce el nombre del usuario");
-                String name = scanner.nextLine();
+                String name = scanner.next();
                 System.out.println("Introduce el email del usuario");
-                String email = scanner.nextLine();
+                String email = scanner.next();
                 System.out.println("Introduce el DNI del usuario");
-                String DNI = scanner.nextLine();
+                String DNI = scanner.next();
                 User user = new User(name, email, DNI);
                 UserPresentation userPresentation = new UserPresentation();
-                userPresentation.create(user);
+                userPresentation.save(user);
                 System.out.println("Usuario registrado correctamente");
                 break;
         }
