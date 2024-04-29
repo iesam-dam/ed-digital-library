@@ -68,4 +68,8 @@ public class UserFileLocalDataSource {
         }
     }
 
+    public User findById(String userId){
+        return null;
+    }
+
 }
