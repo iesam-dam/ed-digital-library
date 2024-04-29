@@ -71,4 +71,8 @@ public class UserFileLocalDataSource {
     public void remove(){
 
     }
+    public User findById(String userId){
+        return null;
+    }
+
 }
