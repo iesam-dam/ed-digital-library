@@ -19,4 +19,11 @@ public class UserDataRepository implements UserRepository {
     public void saveUser(User user) {
         localDataSource.save(user);
     }
+
+    @Override
+    public User getUser(String userId) {
+        return localDataSource.findById(userId);
+    }
+
+
 }
