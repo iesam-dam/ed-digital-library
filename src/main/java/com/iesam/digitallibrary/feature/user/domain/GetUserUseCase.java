@@ -9,6 +9,7 @@ public class GetUserUseCase {
     }
 
     public User execute(String userId){
-        return userRepository.getUser(userId);
+        User user = userRepository.getUser(userId);
+        return user;
     }
 }

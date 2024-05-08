@@ -9,6 +9,6 @@ public class NewUserUseCase {
     }
 
     public void execute(User user){
-        userRepository.saveUser(user);
+        userRepository.saveUser(null);
     }
 }
