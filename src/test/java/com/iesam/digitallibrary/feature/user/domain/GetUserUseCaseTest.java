@@ -39,30 +39,30 @@ class GetUserUseCaseTest {
         User userReceived = getUserUseCase.execute("1001");
 
         //Then
-        Assertions.assertEquals(userExpected.dni, "1001");
-        Assertions.assertEquals(userExpected.name, "Chema");
-        Assertions.assertEquals(userExpected.surname, "Apellidos");
-        Assertions.assertEquals(userExpected.phoneNumber, "650");
-        Assertions.assertEquals(userExpected.email, "asd@asd.com");
-        Assertions.assertEquals(userExpected.dateBorn, "01/01/1990");
+        Assertions.assertEquals(userReceived.dni, "1001");
+        Assertions.assertEquals(userReceived.name, "Chema");
+        Assertions.assertEquals(userReceived.surname, "Apellidos");
+        Assertions.assertEquals(userReceived.phoneNumber, "650");
+        Assertions.assertEquals(userReceived.email, "asd@asd.com");
+        Assertions.assertEquals(userReceived.dateBorn, "01/01/1990");
 
         //** Errores a evitar **/
         //1. Aquí se comparan direcciones de memorias, puede darse el caso que conserve la dirección pero se haya modificado algún atributo.
-        Assertions.assertEquals(userExpected, userReceived);
+        //Assertions.assertEquals(userExpected, userReceived);
 
         //2. Puede que se de el caso que se modifiquen los atributos en ambos objetos.
         // Nota: Si hay compromiso de hacerlos final, se podría usar
-        Assertions.assertEquals(userExpected.dni, userReceived.dni);
+        //Assertions.assertEquals(userExpected.dni, userReceived.dni);
     }
 
     @Test
     public void dadoUnUserIdNoValidoDevuelveNull(){
         //Given
-        String userDni = "1002";
+        String userDniNotValid = "1002";
         Mockito.when(userRepository.getUser("1002")).thenReturn(null);
 
         //When
-        User userReceived = getUserUseCase.execute(userDni);
+        User userReceived = getUserUseCase.execute(userDniNotValid);
 
         //Then
         Assertions.assertNull(userReceived);
