@@ -21,9 +21,12 @@ public class UserDataRepository implements UserRepository {
     }
 
     @Override
+    public void removeUser(String userId) {
+        localDataSource.remove();
+    }
+
+    @Override
     public User getUser(String userId) {
         return localDataSource.findById(userId);
     }
-
-
 }

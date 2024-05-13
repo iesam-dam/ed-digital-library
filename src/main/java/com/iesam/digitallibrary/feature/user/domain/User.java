@@ -1,7 +1,7 @@
 package com.iesam.digitallibrary.feature.user.domain;
 
 public class User {
-    public final String dni;
+    public String dni;
     public final String name;
     public final String surname;
     public final String phoneNumber;
